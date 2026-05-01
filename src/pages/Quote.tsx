@@ -25,7 +25,7 @@ const Quote = () => {
       `Notes:\n${get("notes")}\n\n` +
       (file ? `Artwork file: ${file.name} (please attach manually)\n` : "")
     );
-    window.location.href = `mailto:bestprintingllc@gmail.com,info@bestprintinganddesign.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:bestprintingllc@gmail.com?subject=${subject}&body=${body}`;
     await new Promise(r => setTimeout(r, 600));
     setSubmitting(false);
     toast.success("Opening your email app to send the quote request...");
